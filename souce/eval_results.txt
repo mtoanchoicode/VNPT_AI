@@ -1,0 +1,68 @@
+Evaluating 60 samples...
+
+[1/60] val_0001 | GT: B | LLM: B | ✔ | Class: RAG | Time: 1.439s
+[2/60] val_0002 | GT: A | LLM: A | ✔ | Class: RAG | Time: 0.729s
+[3/60] val_0003 | GT: B | LLM: B | ✔ | Class: Multi-Domain | Time: 0.782s
+[4/60] val_0004 | GT: B | LLM: C | ✘ | Class: STEM | Time: 0.645s
+[5/60] val_0005 | GT: C | LLM: C | ✔ | Class: STEM | Time: 0.600s
+[6/60] val_0006 | GT: C | LLM: C | ✔ | Class: Compulsory | Time: 0.583s
+[7/60] val_0007 | GT: B | LLM: None | ✘ | Class: RAG | Time: 0.337s
+[8/60] val_0008 | GT: B | LLM: B | ✔ | Class: Multi-Domain | Time: 0.669s
+[9/60] val_0009 | GT: B | LLM: B | ✔ | Class: RAG | Time: 0.820s
+[10/60] val_0010 | GT: A | LLM: A | ✔ | Class: RAG | Time: 0.976s
+[11/60] val_0011 | GT: B | LLM: A | ✘ | Class: RAG | Time: 1.172s
+[12/60] val_0012 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.780s
+[13/60] val_0013 | GT: D | LLM: D | ✔ | Class: Compulsory | Time: 0.751s
+[14/60] val_0014 | GT: A | LLM: A | ✔ | Class: Compulsory | Time: 0.615s
+[15/60] val_0015 | GT: A | LLM: A | ✔ | Class: RAG | Time: 0.672s
+[16/60] val_0016 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.599s
+[17/60] val_0017 | GT: D | LLM: D | ✔ | Class: Multi-Domain | Time: 0.657s
+[18/60] val_0018 | GT: D | LLM: D | ✔ | Class: Multi-Domain | Time: 0.741s
+[19/60] val_0019 | GT: B | LLM: B | ✔ | Class: RAG | Time: 0.856s
+[20/60] val_0020 | GT: C | LLM: F | ✘ | Class: STEM | Time: 0.775s
+[21/60] val_0021 | GT: D | LLM: D | ✔ | Class: Multi-Domain | Time: 0.822s
+[22/60] val_0022 | GT: D | LLM: D | ✔ | Class: Multi-Domain | Time: 0.782s
+[23/60] val_0023 | GT: A | LLM: D | ✘ | Class: Compulsory | Time: 0.769s
+[24/60] val_0024 | GT: A | LLM: B | ✘ | Class: STEM | Time: 0.605s
+[25/60] val_0025 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.646s
+[26/60] val_0026 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.589s
+[27/60] val_0027 | GT: C | LLM: C | ✔ | Class: STEM | Time: 0.659s
+[28/60] val_0028 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.760s
+[29/60] val_0029 | GT: A | LLM: B | ✘ | Class: RAG | Time: 0.764s
+[30/60] val_0030 | GT: B | LLM: B | ✔ | Class: Multi-Domain | Time: 0.768s
+[31/60] val_0031 | GT: C | LLM: C | ✔ | Class: STEM | Time: 0.756s
+[32/60] val_0032 | GT: B | LLM: B | ✔ | Class: RAG | Time: 0.875s
+[33/60] val_0033 | GT: C | LLM: C | ✔ | Class: STEM | Time: 0.853s
+[34/60] val_0034 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.604s
+[35/60] val_0035 | GT: B | LLM: C | ✘ | Class: Compulsory | Time: 0.594s
+[36/60] val_0036 | GT: B | LLM: B | ✔ | Class: Precision-Critical | Time: 0.606s
+[37/60] val_0037 | GT: C | LLM: C | ✔ | Class: STEM | Time: 0.600s
+[38/60] val_0038 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.775s
+[39/60] val_0039 | GT: B | LLM: B | ✔ | Class: Multi-Domain | Time: 0.773s
+[40/60] val_0040 | GT: E | LLM: D | ✘ | Class: Precision-Critical | Time: 0.817s
+[41/60] val_0041 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.783s
+[42/60] val_0042 | GT: B | LLM: B | ✔ | Class: Precision-Critical | Time: 0.800s
+[43/60] val_0043 | GT: D | LLM: D | ✔ | Class: STEM | Time: 0.849s
+[44/60] val_0044 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.609s
+[45/60] val_0045 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.667s
+[46/60] val_0046 | GT: B | LLM: B | ✔ | Class: RAG | Time: 0.648s
+[47/60] val_0047 | GT: A | LLM: A | ✔ | Class: STEM | Time: 0.698s
+[48/60] val_0048 | GT: A | LLM: A | ✔ | Class: RAG | Time: 1.103s
+[49/60] val_0049 | GT: B | LLM: B | ✔ | Class: STEM | Time: 0.736s
+[50/60] val_0050 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.741s
+[51/60] val_0051 | GT: A | LLM: A | ✔ | Class: STEM | Time: 0.778s
+[52/60] val_0052 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.763s
+[53/60] val_0053 | GT: A | LLM: B | ✘ | Class: RAG | Time: 0.685s
+[54/60] val_0054 | GT: C | LLM: C | ✔ | Class: Multi-Domain | Time: 0.584s
+[55/60] val_0055 | GT: A | LLM: B | ✘ | Class: RAG | Time: 0.622s
+[56/60] val_0056 | GT: D | LLM: D | ✔ | Class: Compulsory | Time: 0.615s
+[57/60] val_0057 | GT: A | LLM: A | ✔ | Class: Compulsory | Time: 0.668s
+[58/60] val_0058 | GT: A | LLM: A | ✔ | Class: RAG | Time: 0.730s
+[59/60] val_0059 | GT: A | LLM: A | ✔ | Class: STEM | Time: 0.853s
+[60/60] val_0060 | GT: B | LLM: B | ✔ | Class: Multi-Domain | Time: 0.817s
+
+=============================
+Accuracy: 81.67% (49/60)
+Avg Inference Time: 0.739 seconds
+Min/Max Latency: 0.337s / 1.439s
+=============================

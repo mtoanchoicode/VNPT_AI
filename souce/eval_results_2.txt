@@ -1,0 +1,9 @@
+Evaluating 1 samples...
+
+[1/1] val_0001 | GT: B | LLM: B | ✔ | Class: RAG | Time: 2.721s
+
+=============================
+Accuracy: 100.00% (1/1)
+Avg Inference Time: 2.721 seconds
+Min/Max Latency: 2.721s / 2.721s
+=============================
