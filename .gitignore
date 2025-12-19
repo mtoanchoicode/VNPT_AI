@@ -4,3 +4,8 @@ data/
 test_data/
 __pycache__/
 *.pyc
+
+# Vector DB / FAISS
+*.faiss
+RAG_model_*/
+vectorstore/
