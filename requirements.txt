@@ -1,0 +1,13 @@
+# Core HTTP & env
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Progress / utils
+tqdm>=4.65.0
+
+# LangChain + FAISS (Reasoning)
+langchain>=0.1.0
+langchain-community>=0.0.30
+
+# FAISS (CPU is enough; GPU not required for this task)
+faiss-cpu>=1.7.4

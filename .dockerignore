@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment files
+.env
+src/.env
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Data used for training/testing (NOT used in Docker runtime)
+data/
+
+# Logs / outputs
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db
