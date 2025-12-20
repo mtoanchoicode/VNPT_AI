@@ -97,6 +97,11 @@ VNPT_AI/
 3. Sinh `submission.csv`
 4. Kết thúc
 
+```bash
+docker run --gpus all \
+  -v /path/to/private_test.json:/code/private_test.json \
+  danai39/oversitting_submission:final
+```
 ---
 
 ## 8. Định dạng output
@@ -125,7 +130,7 @@ Hệ thống sử dụng các biến môi trường do BTC cung cấp:
 - Docker Hub Image:
 
 ```
-danai39/oversitting_submission:latest
+danai39/oversitting_submission:final
 ```
 
 ---
