@@ -21,6 +21,8 @@ src/.env
 
 # Data used for training/testing (NOT used in Docker runtime)
 data/
+test_data/
+*.json
 
 # Logs / outputs
 *.csv
