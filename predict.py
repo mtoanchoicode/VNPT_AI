@@ -4,6 +4,7 @@
 import os
 import json
 import csv
+import time  # ✅ ADD
 
 # -------------------------------------------------
 # Imports (package layout)
@@ -18,19 +19,14 @@ from src.Reasoning.infer import solve_reasoning
 # -------------------------------------------------
 INPUT_PATH = "/code/private_test.json"
 OUTPUT_PATH = "submission.csv"
+OUTPUT_TIME_PATH = "submission_time.csv"
 
-# Allow overriding router model via environment variable
-# Example: ROUTER_MODEL=large
 ROUTER_MODEL = "large"
 
 
 def normalize_answer(ans: str, n_choices: int) -> str:
-    """
-    Normalize model output to A/B/C/D...
-    """
     if not ans:
         return "A"
-
     ans = str(ans).strip().upper()
     for ch in ans:
         if "A" <= ch <= "Z":
@@ -51,6 +47,7 @@ def main():
         raise ValueError("❌ private_test.json must be a JSON list")
 
     results = []
+    results_time = []
 
     for item in data:
         qid = str(item["qid"])
@@ -59,14 +56,12 @@ def main():
         if not isinstance(choices, list):
             choices = []
 
-        # -------------------------
+        start_t = time.time()
+
         # 1) Route
-        # -------------------------
         label, subtype = classify_one(question, choices, model=ROUTER_MODEL)
 
-        # -------------------------
         # 2) Solve
-        # -------------------------
         if label == "RAG":
             answer = solve_rag(question, choices)
         elif label == "STEM":
@@ -76,20 +71,29 @@ def main():
 
         answer = normalize_answer(answer, len(choices))
 
-        results.append({
+        elapsed = time.time() - start_t
+
+        results.append({"qid": qid, "answer": answer})
+        results_time.append({  
             "qid": qid,
-            "answer": answer
+            "answer": answer,
+            "time": f"{elapsed:.6f}"  # string ok; fixed decimals
         })
 
-    # -------------------------
     # Write submission.csv
-    # -------------------------
     with open(OUTPUT_PATH, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["qid", "answer"])
         writer.writeheader()
         writer.writerows(results)
 
+    # ✅ Write submission_time.csv
+    with open(OUTPUT_TIME_PATH, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["qid", "answer", "time"])
+        writer.writeheader()
+        writer.writerows(results_time)
+
     print(f"✅ submission.csv generated with {len(results)} rows")
+    print(f"✅ submission_time.csv generated with {len(results_time)} rows")
 
 
 if __name__ == "__main__":
