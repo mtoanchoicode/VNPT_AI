@@ -26,19 +26,21 @@ Giải pháp tập trung vào:
 
 ## 2. Luồng xử lý tổng thể (Pipeline Flow)
 
-```
-private_test.json
-        │
-        ▼
-   Router (Heuristic + LLM)
-        │
-        ├── RAG        ──► RAG Solver (Embedding + FAISS + LLM Large)
-        ├── STEM       ──► STEM Solver (LLM Small, Chain-of-Thought)
-        └── Reasoning  ──► Reasoning Solver (LLM Large)
-        │
-        ▼
-  submission.csv
-```
+Hệ thống vận hành theo cơ chế **Dynamic Routing**, tự động điều hướng câu hỏi dựa trên đặc tính nội dung để tối ưu hóa tài nguyên và độ chính xác:
+
+![Overall Pipeline Diagram](./images/overall_pipeline.jpg)
+_(Hình 1: Sơ đồ luồng xử lý tổng thể của hệ thống Oversitting)_
+
+- **Router (Hybrid):** Kết hợp Heuristic và LLM (Few-shot) để phân loại câu hỏi ngay từ đầu vào thành 3 nhóm: STEM, RAG, và Reasoning.
+- **RAG Solver:** Sử dụng **VNPT Embedding** và **FAISS** để trích xuất thông tin từ ngữ cảnh nội bộ (Internal Context) hoặc tài liệu đính kèm với Top K=3.
+- **STEM Solver:** Tập trung vào **LLM Small** kết hợp với kỹ thuật **Chain-of-Thought (CoT)** để giải quyết các bài toán logic và tính toán theo từng bước.
+- **Reasoning Solver:** Sử dụng **LLM Large** truy vấn kho tri thức ngoại lực (External Knowledge Base) đa lĩnh vực được index sẵn.
+
+---
+
+📄 **Xem chi tiết mô tả kỹ thuật và Prompt cho từng Pipeline tại:**
+👉 [Full Technical Report - Oversitting System](./technical_report_Oversiting.pdf)
+👉 [Full Technical Report - Oversitting System (Link Drive dự phòng)](https://drive.google.com/file/d/1vddqkUYMh5d-Q7RNeOKRn9TOOSllKSGt/view?usp=sharing)
 
 ---
 
@@ -102,6 +104,7 @@ docker run --gpus all \
   -v /path/to/private_test.json:/code/private_test.json \
   danai39/oversitting_submission:final
 ```
+
 ---
 
 ## 8. Định dạng output
